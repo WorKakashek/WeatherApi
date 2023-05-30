@@ -1,0 +1,81 @@
+:root {
+    --index: (1vw+1vh)
+}
+
+.header {
+    position: relative;
+}
+.container{
+    padding: 0;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc(var(--index)*10);
+    background-image: url("../images/cloud-mid.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(var(--index)*19);
+    bottom: calc(var(--index)*-8);
+}
+
+.paralax {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+.layer-main {
+    background-image: url("../images/fon.png");
+    transform: translate3d(0, calc(var(--scrollTop)/1.6), 0);
+}
+
+.layer-middle {
+    background-image: url("../images/lay2.png");
+    transform: translate3d(0, calc(var(--scrollTop)/5.6), 0);
+    z-index: 2;
+}
+
+.layer-first {
+    background-image: url("../images/lay1.png");
+    transform: translate3d(0, calc(var(--scrollTop)/3.6), 0);
+    z-index: 3;
+}
+
+.text {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop)/2.6), 0);
+    text-align: center;
+    text-transform: uppercase;
+    will-change: transform;
+    font-weight: 900;
+}
+
+.title {
+    color: aqua;
+    font-size: calc(var(--index)*5);
+}
+
+.main {
+    background-image: url("../images/forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.weather-form{
+    padding: calc(var(--index)*8) calc(var(--index)*8);;
+}
